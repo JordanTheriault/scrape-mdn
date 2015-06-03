@@ -9,13 +9,16 @@ var fs 		= require("fs");
 var request	= require("request");
 
 //File names for output
-var MDN_CSS_DOC_FILENAME = "mdnCssDocs";
-var MDN_HTML_DOC_FILENAME = "mdnHtmlDocs";
+var MDN_CSS_DOC_FILENAME = "css";
+var MDN_HTML_DOC_FILENAME = "html";
+
+//Language setting to retrieve localized, ex "/en-US", blank for default
+var DOC_LANG = "";
 
 //Links to MDN pages
 var MDN_URL 			= "https://developer.mozilla.org/en-US/";
-var MDN_HTML_DOC_URL 	= "https://developer.mozilla.org/en-US/docs/Web/HTML/Element$children?expand";
-var MDN_CSS_DOC_URL 	= "https://developer.mozilla.org/en-US/docs/Web/CSS$children?expand";
+var MDN_HTML_DOC_URL 	= "https://developer.mozilla.org" + DOC_LANG + "/docs/Web/HTML/Element$children?expand";
+var MDN_CSS_DOC_URL 	= "https://developer.mozilla.org" + DOC_LANG + "/docs/Web/CSS$children?expand";
 
 //JSON object to put newly constructed data
 
